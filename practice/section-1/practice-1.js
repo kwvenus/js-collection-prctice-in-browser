@@ -1,5 +1,16 @@
 'use strict';
 
 function collectSameElements(collectionA, collectionB) {
-  return collectionA.filter(element => collectionB.includes(element));
+	var ans = [];
+	var valA;
+	var valB;
+	for (valA in collectionA){
+		for (valB in collectionB){
+			if (collectionA[valA] == collectionB[valB]){
+				ans.push(collectionA[valA]);
+				break;
+			}
+		}
+	}
+	return ans;
 }
